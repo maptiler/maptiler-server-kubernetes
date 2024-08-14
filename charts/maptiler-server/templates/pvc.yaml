@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "maptiler-server.fullname" . }}
+  labels:
+    {{- include "maptiler-server.labels" . | nindent 4 }}
+spec:
+  storageClassName: {{ .Values.storage.storageClassName | quote }}
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: {{ .Values.storage.size }}
+  {{- if .Values.storage.nfs }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/storage-type: nfs
+  {{- end }}

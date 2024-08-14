@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  MAPTILER_SERVER_ADMIN_PASSWORD: {{ .Values.maptilerServer.adminPassword | quote }}
+  {{- if .Values.maptilerServer.licenseKey }}
+  MAPTILER_SERVER_LICENSE: {{ .Values.maptilerServer.licenseKey | quote }}
+  {{- end }}
+  {{- if .Values.maptilerServer.licenseServer }}
+  MAPTILER_SERVER_LICENSE_SERVER: {{ .Values.maptilerServer.licenseServer | quote }}
+  {{- end }}
+  MAPTILER_SERVER_PORT: {{ .Values.maptilerServer.port | quote }}
+  MAPTILER_SERVER_RASTERIZATION: {{ .Values.maptilerServer.rasterization | quote }}
+  MAPTILER_SERVER_WORK_DIR: {{ .Values.maptilerServer.workDir | quote }}
+  MAPTILER_SERVER_WITH_ADMIN: "false"
+kind: ConfigMap
+metadata:
+  name: {{ include "maptiler-server.fullname" . }}
+  labels:
+    {{- include "maptiler-server.labels" . | nindent 4 }}
