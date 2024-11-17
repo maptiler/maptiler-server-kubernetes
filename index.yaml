@@ -3,6 +3,29 @@ entries:
   maptiler-server:
   - annotations:
       artifacthub.io/changes: |
+        - MapTiler Server release 4.6.0
+      artifacthub.io/links: |
+        - name: Docker Image
+          url: https://hub.docker.com/r/maptiler/server
+        - name: Helm Chart
+          url: https://labs.maptiler.com/maptiler-server-kubernetes/
+    apiVersion: v2
+    appVersion: 4.6.0
+    created: "2024-11-17T10:12:05.6488256+01:00"
+    description: MapTiler Server - self-hosting OpenStreetMap world maps and maps
+      made with MapTiler
+    digest: f6357404c0f4678734784a8c1f46dad933b1fc8a864019b1e69b5d9ad58a05f8
+    home: https://www.maptiler.com/server/
+    icon: https://www.gravatar.com/avatar/b53ef88ec5f7fc1e1423b620bc3c69e2?s=160
+    name: maptiler-server
+    sources:
+    - https://github.com/maptiler/maptiler-server-kubernetes
+    type: application
+    urls:
+    - https://github.com/maptiler/maptiler-server-kubernetes/releases/download/v1.1.0/maptiler-server-1.1.0.tgz
+    version: 1.1.0
+  - annotations:
+      artifacthub.io/changes: |
         - Initial release of the Helm Chart
       artifacthub.io/links: |
         - name: Docker Image
@@ -24,4 +47,4 @@ entries:
     urls:
     - https://github.com/maptiler/maptiler-server-kubernetes/releases/download/v1.0.0/maptiler-server-1.0.0.tgz
     version: 1.0.0
-generated: "2024-08-14T14:59:09.2216877+02:00"
+generated: "2024-11-17T10:12:05.6298383+01:00"
