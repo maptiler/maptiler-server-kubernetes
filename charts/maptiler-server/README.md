@@ -98,9 +98,14 @@ helm install maptiler-server-app -f values.yaml maptiler/maptiler-server
 
 ## Examples
 
-You can find configuration examples in our [Documentation Portal](https://documentation.maptiler.com/hc/en-us/categories/22658073695889-Map-Server).
+You can find configuration examples in our [Documentation Portal](https://docs.maptiler.com/guides/self-hosting/map-server/?utm_source=artifactory&utm_medium=description%20%7C%20documentation&utm_content=documentation
+).
 
 ## ChangeLog
+
+### 1.1.0
+
+- MapTiler Server release 4.6.0
 
 ### 1.0.0
 
