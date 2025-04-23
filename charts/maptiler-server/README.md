@@ -38,49 +38,50 @@ The command removes all the Kubernetes components associated with the chart and 
 
 Below are the supported configuration options that can be overridden or customized in `values.yaml`:
 
-| Parameter                                 | Description                                   | Default                                                 |
-|-------------------------------------------|-----------------------------------------------|---------------------------------------------------------|
-| `replicaCount`                            | Number of pods                                | `1`                                                     |
-| `image.repository`                        | Image repository                              | `maptiler/server`                                       |
-| `image.tag`                               | Overrides the image tag whose default is the chart appVersion. | `""`                                   |
-| `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                                          |
-| `imagePullSecrets`                        | Image pull secrets (can be templated)         | `[]`                                                    |
-| `nameOverride`                            | Overrides the default chart name              | `""`                                                    |
-| `fullnameOverride`                        | Overrides the default chart full name         | `""`                                                    |
-| `podAnnotations`                          | Pod annotations                               | `{}`                                                    |
-| `podLabels`                               | Pod labels                                    | `{}`                                                    |
-| `podSecurityContext`                      | Pod securityContext                           | `{}`                                                    |
-| `securityContext`                         | Deployment securityContext                    | `{}`                                                    |
-| `service.type`                            | Kubernetes service type                       | `ClusterIP`                                             |
-| `service.port`                            | Kubernetes port where service is exposed      | `80`                                                    |
-| `ingress.enabled`                         | Enables Ingress                               | `false`                                                 |
-| `ingress.className`                       | Ingress Class Name. MAY be required for Kubernetes versions >= 1.18 | `""`                              |
-| `ingress.annotations`                     | Ingress annotations (values are templated)    | `{}`                                                    |
-| `ingress.hosts`                           | Ingress hosts (can be templated)              | `{ "hosts": [{ "host": "maps.company.com", "paths": [{ "path": "/", "pathType": "ImplementationSpecific"}] }] }` |
-| `ingress.tls`                             | Ingress TLS configuration                     | `[]`                                                    |
-| `resources`                               | CPU/Memory resource requests/limits           | `{}`                                                    |
-| `livenessProbe`                           | Liveness Probe settings                       | `{ "httpGet": { "path": "/", "port": http } }`          |
-| `readinessProbe`                          | Readiness Probe settings                      | `{ "httpGet": { "path": "/", "port": http } }`          |
-| `autoscaling.enabled`                     | Enables Autoscaling                           | `false`                                                 |
-| `autoscaling.minReplicas`                 | Minimal number of pods                        | `1`                                                     |
-| `autoscaling.maxReplicas`                 | Maximal number of pods                        | `100`                                                   |
-| `autoscaling.targetCPUUtilizationPercentage` | Target CPU utilization percentage          | `80`                                                    |
-| `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utilization percentage    | `nil`                                                   |
-| `storage.storageClassName`                | Type of persistent volume claim               | `manual`                                                |
-| `storage.size`                            | Size of persistent volume claim               | `20Gi`                                                  |
-| `storage.nfs`                             | Whether storage is NFS                        | `false`                                                 |
-| `volumes`                                 | Additional volumes                            | `[]`                                                    |
-| `volumeMounts`                            | Additional volume mounts                      | `[]`                                                    |
-| `nodeSelector`                            | Node labels for pod assignment                | `{}`                                                    |
-| `tolerations`                             | Toleration labels for pod assignment          | `[]`                                                    |
-| `affinity`                                | Affinity settings for pod assignment          | `{}`                                                    |
-| `maptilerServer.adminPassword`            | Password for MapTiler Server Admin interface  | `admin123`                                              |
-| `maptilerServer.port`                     | MapTiler Server Port                          | `3650`                                                  |
-| `maptilerServer.licenseKey`               | MapTiler Server License Key                   | `""`                                                    |
-| `maptilerServer.licenseServer`            | MapTiler Server License Server URL            | `""`                                                    |
-| `maptilerServer.rasterization`            | Enables map rasterization                     | `true`                                                  |
-| `maptilerServer.withAdmin`                | Enables Admin interface                       | `true`                                                  |
-| `maptilerServer.workDir`                  | MapTiler Server working directory with config and tilesets | `/data`                                                  |
+| Parameter                                 | Description                                                         | Default                                                                                                          |
+|-------------------------------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| `replicaCount`                            | Number of pods                                                      | `1`                                                                                                              |
+| `image.repository`                        | Image repository                                                    | `maptiler/server`                                                                                                |
+| `image.tag`                               | Overrides the image tag whose default is the chart appVersion.      | `""`                                                                                                             |
+| `image.pullPolicy`                        | Image pull policy                                                   | `IfNotPresent`                                                                                                   |
+| `imagePullSecrets`                        | Image pull secrets (can be templated)                               | `[]`                                                                                                             |
+| `nameOverride`                            | Overrides the default chart name                                    | `""`                                                                                                             |
+| `fullnameOverride`                        | Overrides the default chart full name                               | `""`                                                                                                             |
+| `podAnnotations`                          | Pod annotations                                                     | `{}`                                                                                                             |
+| `podLabels`                               | Pod labels                                                          | `{}`                                                                                                             |
+| `podSecurityContext`                      | Pod securityContext                                                 | `{}`                                                                                                             |
+| `securityContext`                         | Deployment securityContext                                          | `{}`                                                                                                             |
+| `service.type`                            | Kubernetes service type                                             | `ClusterIP`                                                                                                      |
+| `service.port`                            | Kubernetes port where service is exposed                            | `80`                                                                                                             |
+| `ingress.enabled`                         | Enables Ingress                                                     | `false`                                                                                                          |
+| `ingress.className`                       | Ingress Class Name. MAY be required for Kubernetes versions >= 1.18 | `""`                                                                                                             |
+| `ingress.annotations`                     | Ingress annotations (values are templated)                          | `{}`                                                                                                             |
+| `ingress.hosts`                           | Ingress hosts (can be templated)                                    | `{ "hosts": [{ "host": "maps.company.com", "paths": [{ "path": "/", "pathType": "ImplementationSpecific"}] }] }` |
+| `ingress.tls`                             | Ingress TLS configuration                                           | `[]`                                                                                                             |
+| `resources`                               | CPU/Memory resource requests/limits                                 | `{}`                                                                                                             |
+| `livenessProbe`                           | Liveness Probe settings                                             | `{ "httpGet": { "path": "/", "port": http } }`                                                                   |
+| `readinessProbe`                          | Readiness Probe settings                                            | `{ "httpGet": { "path": "/", "port": http } }`                                                                   |
+| `autoscaling.enabled`                     | Enables Autoscaling                                                 | `false`                                                                                                          |
+| `autoscaling.minReplicas`                 | Minimal number of pods                                              | `1`                                                                                                              |
+| `autoscaling.maxReplicas`                 | Maximal number of pods                                              | `100`                                                                                                            |
+| `autoscaling.targetCPUUtilizationPercentage` | Target CPU utilization percentage                                   | `80`                                                                                                             |
+| `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utilization percentage                                | `nil`                                                                                                            |
+| `storage.existingClaim`                   | Use an existing PVC. If not set, it will create new volume claim    | `false`                                                                                                          |
+| `storage.storageClassName`                | Type of persistent volume claim                                     | `manual`                                                                                                         |
+| `storage.size`                            | Size of persistent volume claim                                     | `20Gi`                                                                                                           |
+| `storage.nfs`                             | Whether storage is NFS                                              | `false`                                                                                                          |
+| `volumes`                                 | Additional volumes                                                  | `[]`                                                                                                             |
+| `volumeMounts`                            | Additional volume mounts                                            | `[]`                                                                                                             |
+| `nodeSelector`                            | Node labels for pod assignment                                      | `{}`                                                                                                             |
+| `tolerations`                             | Toleration labels for pod assignment                                | `[]`                                                                                                             |
+| `affinity`                                | Affinity settings for pod assignment                                | `{}`                                                                                                             |
+| `maptilerServer.adminPassword`            | Password for MapTiler Server Admin interface                        | `admin123`                                                                                                       |
+| `maptilerServer.port`                     | MapTiler Server Port                                                | `3650`                                                                                                           |
+| `maptilerServer.licenseKey`               | MapTiler Server License Key                                         | `""`                                                                                                             |
+| `maptilerServer.licenseServer`            | MapTiler Server License Server URL                                  | `""`                                                                                                             |
+| `maptilerServer.rasterization`            | Enables map rasterization                                           | `true`                                                                                                           |
+| `maptilerServer.withAdmin`                | Enables Admin interface                                             | `true`                                                                                                           |
+| `maptilerServer.workDir`                  | MapTiler Server working directory with config and tilesets          | `/data`                                                                                                          |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
