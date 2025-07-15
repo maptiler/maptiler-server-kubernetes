@@ -17,13 +17,13 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.1.2
+version: 1.2.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "4.6.2"
+appVersion: "4.7.0"
 
 sources:
   - https://github.com/maptiler/maptiler-server-kubernetes
@@ -35,4 +35,4 @@ annotations:
     - name: Helm Chart
       url: https://labs.maptiler.com/maptiler-server-kubernetes/
   artifacthub.io/changes: |
-    - MapTiler Server release 4.6.2
+    - MapTiler Server release 4.7.0
