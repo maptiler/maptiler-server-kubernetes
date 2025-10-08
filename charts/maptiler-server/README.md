@@ -103,6 +103,10 @@ You can find configuration examples in our [Documentation Portal](https://docs.m
 
 ## ChangeLog
 
+### 1.2.1
+
+- MapTiler Server release 4.7.1
+
 ### 1.2.0
 
 - MapTiler Server release 4.7.0
