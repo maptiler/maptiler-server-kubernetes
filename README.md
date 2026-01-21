@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/maptiler/maptiler-sdk-kotlin/main/Examples/maptiler-logo.png" alt="Company Logo" height="32"/>
+<img src="https://www.maptiler.com/styles/style/logo/maptiler-logo-adaptive.svg?123#maptilerLogo" alt="Company Logo" height="32"/>
 
 # MapTiler Server Helm Charts
 
@@ -8,17 +8,17 @@ This repository provides Kubernetes and Helm-based deployment resources for [Map
 
 ---
 
-📖 [Documentation](https://docs.maptiler.com/guides/self-hosting/map-server/) &nbsp; 🌐 [Website](https://www.maptiler.com/server/) &nbsp; 🔑 [Get API Key](https://cloud.maptiler.com/account/keys/)
+📖 [Documentation](https://docs.maptiler.com/guides/self-hosting/map-server/) &nbsp; 🌐 [Website](https://www.maptiler.com/server/)
 
 ---
 
 ## 📦 Installation
 
-The main Helm chart and its full documentation are located in the `charts` directory.
+The main Helm chart and its full documentation are located in the `charts/maptiler-server` directory.
 
 👉 **For installation, configuration options, values, and usage details, please refer to:**
 
-➡️ **[`charts/README.md`](charts/README.md)**
+➡️ **[`charts/maptiler-server/README.md`](charts/maptiler-server/README.md)**
 
 This is the authoritative and up-to-date documentation used by Artifact Hub.
 

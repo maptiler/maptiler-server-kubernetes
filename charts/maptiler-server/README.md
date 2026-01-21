@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/maptiler/maptiler-sdk-kotlin/main/Examples/maptiler-logo.png" alt="Company Logo" height="32"/>
+<img src="https://www.maptiler.com/styles/style/logo/maptiler-logo-adaptive.svg?123#maptilerLogo" alt="Company Logo" height="32"/>
 
 # MapTiler Server
 
@@ -8,7 +8,7 @@
 
 ---
 
-📖 [Documentation](https://docs.maptiler.com/guides/self-hosting/map-server/) &nbsp; 🌐 [Website](https://www.maptiler.com/server/) &nbsp; 🔑 [Get API Key](https://cloud.maptiler.com/account/keys/)
+📖 [Documentation](https://docs.maptiler.com/guides/self-hosting/map-server/) &nbsp; 🌐 [Website](https://www.maptiler.com/server/)
 
 ---
 
@@ -19,6 +19,7 @@
 <li><a href="#-installation">Installation</a></li>
 <li><a href="#-examples">Examples</a></li>
 <li><a href="#-api-reference">API Reference</a></li>
+<li><a href="#configuration">Configuration</a></li>
 <li><a href="#changelog">ChangeLog</a></li>
 <li><a href="#-support">Support</a></li>
 <li><a href="#-contributing">Contributing</a></li>
@@ -63,7 +64,7 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## 💡 Examples
 
-You can find configuration examples in our [Documentation Portal](https://docs.maptiler.com/guides/self-hosting/map-server/).
+You can find configuration examples in our [Documentation Portal](https://docs.maptiler.com/guides/self-hosting/map-server/?utm_source=artifactory&utm_medium=description%20%7C%20documentation&utm_content=documentation).
 
 <br>
 
@@ -73,7 +74,9 @@ For detailed guides, API reference, and advanced examples, visit our comprehensi
 
 [API documentation](https://docs.maptiler.com/guides/self-hosting/map-server/#reference)
 
-### Configuration
+<br>
+
+## Configuration
 
 Below are the supported configuration options that can be overridden or customized in `values.yaml`:
 
