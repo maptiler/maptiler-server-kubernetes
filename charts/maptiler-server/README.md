@@ -142,6 +142,10 @@ helm install maptiler-server-app -f values.yaml maptiler/maptiler-server
 
 ## ChangeLog
 
+### 1.3.0
+
+- MapTiler Server release 4.8.0
+
 ### 1.2.1
 
 - MapTiler Server release 4.7.1
